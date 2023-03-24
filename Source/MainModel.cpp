@@ -9,6 +9,6 @@ const QString& MainModel::title() const {
     return this->mTitle;
 }
 
-QString createTitle() {
+QString MainModel::createTitle() {
     return (QString { "%1 %2; %3; %4" }).arg(Manifest::name(), Manifest::version().toString(), Manifest::author(), Manifest::date());
 }

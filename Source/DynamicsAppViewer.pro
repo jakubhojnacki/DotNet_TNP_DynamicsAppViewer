@@ -9,16 +9,22 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    AboutController.cpp \
+    AboutDialog.cpp \
+    AboutModel.cpp \
     Application.cpp \
     Int.cpp \
     MainController.cpp \
     MainModel.cpp \
+    MainWindow.cpp \
     Manifest.cpp \
     Version.cpp \
-    main.cpp \
-    MainWindow.cpp
+    main.cpp
 
 HEADERS += \
+    AboutController.hpp \
+    AboutDialog.hpp \
+    AboutModel.hpp \
     Application.hpp \
     Int.hpp \
     MainController.hpp \
@@ -28,6 +34,7 @@ HEADERS += \
     Version.hpp
 
 FORMS += \
+    AboutDialog.ui \
     MainWindow.ui
 
 # Default rules for deployment.

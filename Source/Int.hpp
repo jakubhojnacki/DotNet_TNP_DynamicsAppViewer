@@ -10,11 +10,13 @@ class Int {
         int mValue;
 
     public:
-        const int& value() const;
-        int& value();
+        int value() const;
 
     public:
-        int compare(const int& pValue) const;
+        void value(int pValue);
+
+    public:
+        int compare(const int pValue) const;
         int compare(const Int& pValue) const;
 
 };

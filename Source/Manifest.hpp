@@ -6,8 +6,7 @@
 
 class Manifest {
 
-    private:
-        Manifest();
+    private: Manifest();
 
     public:
         static QString name();

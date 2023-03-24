@@ -7,15 +7,15 @@ Int::Int(const int& pValue)
     : mValue { pValue } {
 }
 
-const int& Int::value() const {
+int Int::value() const {
     return this->mValue;
 }
 
-int& Int::value() {
-    return this->mValue;
+void Int::value(int pValue) {
+    this->mValue = pValue;
 }
 
-int Int::compare(const int& pValue) const {
+int Int::compare(int pValue) const {
     return (this->value() > pValue ? 1 : (this->value() < pValue ? -1 : 0));
 }
 

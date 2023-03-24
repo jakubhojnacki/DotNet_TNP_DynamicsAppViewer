@@ -4,17 +4,11 @@
 
 class MainModel {
 
-    public:
-        MainModel();
+    public: MainModel();
 
-    private:
-        QString mTitle;
-
-    public:
-        const QString& title() const;
-
-    private:
-        static QString createTitle();
+    private: QString mTitle;
+    public: const QString& title() const;
+    private: static QString createTitle();
 
 };
 

@@ -5,11 +5,11 @@
 #include "MainModel.hpp"
 
 class MainController : public QObject {
+
     Q_OBJECT
-    Q_DISABLE_COPY(MainController)
 
     public:
-        MainController(QObject* pParent = nullptr);
+        explicit MainController(QObject* pParent = nullptr);
         MainController(const MainModel& pModel, QObject* pParent = nullptr);
 
     private:
@@ -17,5 +17,11 @@ class MainController : public QObject {
 
     public:
         const QString& title() const;
+
+    public:
+        bool open();
+        bool close();
+        bool exit();
+        void about();
 };
 

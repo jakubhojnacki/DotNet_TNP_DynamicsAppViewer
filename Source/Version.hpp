@@ -17,14 +17,16 @@ class Version {
         int mBuild;
 
     public:
-        const int& major() const;
-        int& major();
-        const int& minor() const;
-        int& minor();
-        const int& hotfix() const;
-        int& hotfix();
-        const int& build() const;
-        int& build();
+        int major() const;
+        int minor() const;
+        int hotfix() const;
+        int build() const;
+
+    public:
+        void major(int pValue);
+        void minor(int pValue);
+        void hotfix(int pValue);
+        void build(int pValue);
 
     public:
         bool operator == (const Version& pVersion) const;
