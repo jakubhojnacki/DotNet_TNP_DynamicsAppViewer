@@ -1,17 +1,21 @@
 #pragma once
 
+#include <QObject>
+
 #include "MainModel.hpp"
 
-class MainController {
+class MainController : public QObject {
+    Q_OBJECT
+    Q_DISABLE_COPY(MainController)
 
     public:
-        MainController();
-        MainController(const MainModel& pModel);
+        MainController(QObject* pParent = nullptr);
+        MainController(const MainModel& pModel, QObject* pParent = nullptr);
 
     private:
         MainModel model { };
 
     public:
-        QString title() const;
+        const QString& title() const;
 };
 

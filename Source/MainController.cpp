@@ -1,12 +1,13 @@
 #include "MainController.hpp"
 
-MainController::MainController() {
+MainController::MainController(QObject* pParent)
+    : QObject { pParent } {
 }
 
-MainController::MainController(const MainModel& pModel)
-    : model { pModel } {
+MainController::MainController(const MainModel& pModel, QObject* pParent)
+    : QObject { pParent }, model { pModel } {
 }
 
-QString MainController::title() const {
+const QString& MainController::title() const {
     return this->model.title();
 }

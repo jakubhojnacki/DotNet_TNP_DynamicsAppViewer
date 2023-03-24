@@ -16,36 +16,36 @@ Version::Version(const int pMajor, const int pMinor, const int pHotfix, const in
     : mMajor { pMajor }, mMinor { pMinor }, mHotfix { pHotfix }, mBuild { pBuild } {
 }
 
-int Version::major() const {
+const int& Version::major() const {
     return this->mMajor;
 }
 
-void Version::major(const int pValue) {
-    this->mMajor = pValue;
+int& Version::major() {
+    return this->mMajor;
 }
 
-int Version::minor() const {
+const int& Version::minor() const {
     return this->mMinor;
 }
 
-void Version::minor(const int pValue) {
-    this->mMinor = pValue;
+int& Version::minor() {
+    return this->mMinor;
 }
 
-int Version::hotfix() const {
+const int& Version::hotfix() const {
     return this->mHotfix;
 }
 
-void Version::hotfix(const int pValue) {
-    this->mHotfix = pValue;
+int& Version::hotfix() {
+    return this->mHotfix;
 }
 
-int Version::build() const {
+const int& Version::build() const {
     return this->mBuild;
 }
 
-void Version::build(const int pValue) {
-    this->mBuild = pValue;
+int& Version::build() {
+    return this->mBuild;
 }
 
 bool Version::operator == (const Version& pVersion) const {

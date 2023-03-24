@@ -4,18 +4,18 @@ class Int {
 
     public:
         Int();
-        Int(const int pValue);
+        Int(const int& pValue);
 
     private:
-        int mValue { 0 };
+        int mValue;
 
     public:
-        int value() const;
-        void value(const int pValue);
+        const int& value() const;
+        int& value();
 
     public:
-        int compare(int pValue) const;
-        int compare(Int pValue) const;
+        int compare(const int& pValue) const;
+        int compare(const Int& pValue) const;
 
 };
 

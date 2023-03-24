@@ -1,9 +1,14 @@
 #include "MainModel.hpp"
 #include "Manifest.hpp"
 
-MainModel::MainModel() {
+MainModel::MainModel()
+    : mTitle { MainModel::createTitle() } {
 }
 
-QString MainModel::title() const {
+const QString& MainModel::title() const {
+    return this->mTitle;
+}
+
+QString createTitle() {
     return (QString { "%1 %2; %3; %4" }).arg(Manifest::name(), Manifest::version().toString(), Manifest::author(), Manifest::date());
 }

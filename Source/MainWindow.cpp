@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget* pParent)
     this->initialise();
 }
 
-MainWindow::MainWindow(MainController pController, QWidget* pParent)
+MainWindow::MainWindow(const MainController& pController, QWidget* pParent)
     : QMainWindow { pParent }, controller { pController }, ui { new Ui::MainWindow } {
     this->ui->setupUi(this);
     this->initialise();

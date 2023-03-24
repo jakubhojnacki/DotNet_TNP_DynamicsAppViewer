@@ -8,10 +8,9 @@ class Application : public QApplication {
 
     public:
         Application(int pArgC, char* pArgV[]);
-        ~Application();
 
     private:
-        MainWindow* mainWindow { nullptr };
+        MainWindow mainWindow;
 
     public:
         int run();

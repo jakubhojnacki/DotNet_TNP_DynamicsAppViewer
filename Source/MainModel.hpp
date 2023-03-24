@@ -8,10 +8,13 @@ class MainModel {
         MainModel();
 
     private:
-        QString mTitle { "" };
+        QString mTitle;
 
     public:
-        QString title() const;
+        const QString& title() const;
+
+    private:
+        static QString createTitle();
 
 };
 
