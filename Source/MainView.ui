@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>MainView</class>
+ <widget class="QMainWindow" name="MainView">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget"/>
-  <widget class="QMenuBar" name="menuBar">
+  <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -29,7 +29,6 @@
     </property>
     <addaction name="openAction"/>
     <addaction name="closeAction"/>
-    <addaction name="separator"/>
     <addaction name="exitAction"/>
    </widget>
    <widget class="QMenu" name="helpMenu">
@@ -41,21 +40,15 @@
    <addaction name="applicationMenu"/>
    <addaction name="helpMenu"/>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QStatusBar" name="statusbar"/>
   <action name="openAction">
    <property name="text">
     <string>&amp;Open</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+O</string>
    </property>
   </action>
   <action name="closeAction">
    <property name="text">
     <string>&amp;Close</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+W</string>
    </property>
   </action>
   <action name="exitAction">

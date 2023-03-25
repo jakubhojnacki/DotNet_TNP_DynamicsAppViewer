@@ -16,12 +16,15 @@ class MainController : public QObject {
         MainModel model { };
 
     public:
-        const QString& title() const;
+        const QString title() const;
 
     public:
-        bool open();
-        bool close();
-        bool exit();
-        void about();
+        void open(QWidget* pParent = nullptr);
+        void close();
+        void about(QWidget* pParent = nullptr);
+
+    signals:
+        void update();
+
 };
 

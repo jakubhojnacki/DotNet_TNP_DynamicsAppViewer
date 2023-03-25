@@ -8,6 +8,10 @@ AboutController::AboutController(const AboutModel& pModel, QObject* pParent)
     : QObject { pParent }, model { pModel } {
 }
 
+const QString AboutController::title() const {
+    return this->model.title();
+}
+
 const QString AboutController::name() const {
     return this->model.name();
 }

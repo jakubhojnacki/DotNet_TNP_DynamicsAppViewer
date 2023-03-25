@@ -4,6 +4,10 @@
 AboutModel::AboutModel() {
 }
 
+const QString AboutModel::title() const {
+    return (QString { "About %1" }).arg(Manifest::name());
+}
+
 const QString AboutModel::name() const {
     return Manifest::name();
 }

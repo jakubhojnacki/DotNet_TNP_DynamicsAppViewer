@@ -4,11 +4,21 @@
 
 class MainModel {
 
-    public: MainModel();
+    public:
+        MainModel();
 
-    private: QString mTitle;
-    public: const QString& title() const;
-    private: static QString createTitle();
+    private:
+        bool mFileOpened { false };
+        QString mFilePath;
+
+    public:
+        const QString title() const;
+        bool fileOpened() const;
+        const QString& filePath() const;
+
+    public:
+        void fileOpened(const bool pValue);
+        void filePath(const QString& pValue);
 
 };
 

@@ -16,6 +16,7 @@ class AboutController : public QObject {
         AboutModel model;
 
     public:
+        const QString title() const;
         const QString name() const;
         const QString description() const;
         const Version version() const;

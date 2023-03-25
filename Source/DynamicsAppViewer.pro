@@ -10,32 +10,32 @@ CONFIG += c++17
 
 SOURCES += \
     AboutController.cpp \
-    AboutDialog.cpp \
     AboutModel.cpp \
+    AboutView.cpp \
     Application.cpp \
     Int.cpp \
     MainController.cpp \
     MainModel.cpp \
-    MainWindow.cpp \
+    MainView.cpp \
     Manifest.cpp \
     Version.cpp \
     main.cpp
 
 HEADERS += \
     AboutController.hpp \
-    AboutDialog.hpp \
     AboutModel.hpp \
+    AboutView.hpp \
     Application.hpp \
     Int.hpp \
     MainController.hpp \
     MainModel.hpp \
-    MainWindow.hpp \
+    MainView.hpp \
     Manifest.hpp \
     Version.hpp
 
 FORMS += \
-    AboutDialog.ui \
-    MainWindow.ui
+    AboutView.ui \
+    MainView.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

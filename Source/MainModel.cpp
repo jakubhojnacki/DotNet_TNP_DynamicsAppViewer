@@ -1,14 +1,25 @@
 #include "MainModel.hpp"
 #include "Manifest.hpp"
 
-MainModel::MainModel()
-    : mTitle { MainModel::createTitle() } {
+MainModel::MainModel() {
 }
 
-const QString& MainModel::title() const {
-    return this->mTitle;
+const QString MainModel::title() const {
+    return (QString { "%1 %2" }).arg(Manifest::name(), Manifest::version().toString());
 }
 
-QString MainModel::createTitle() {
-    return (QString { "%1 %2; %3; %4" }).arg(Manifest::name(), Manifest::version().toString(), Manifest::author(), Manifest::date());
+bool MainModel::fileOpened() const {
+    return this->mFileOpened;
+}
+
+const QString& MainModel::filePath() const {
+    return this->mFilePath;
+}
+
+void MainModel::fileOpened(const bool pValue) {
+    this->mFileOpened = pValue;
+}
+
+void MainModel::filePath(const QString& pValue) {
+    this->mFilePath = pValue;
 }
