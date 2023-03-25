@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>Logo16x16.png</file>
+        <file>Logo24x24.png</file>
+        <file>Logo32x32.png</file>
+        <file>Logo48x48.png</file>
+        <file>Logo64x64.png</file>
+        <file>Logo128x128.png</file>
+        <file>Logo256x256.png</file>
+    </qresource>
+</RCC>
